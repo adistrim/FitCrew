@@ -3,9 +3,9 @@ import { loginUser } from "@/utils/auth";
 export async function POST(request) {
     try {
         const { email, password } = await request.json();
-        const { user, token } = await loginUser(email, password);
+        const { token } = await loginUser(email, password);
 
-        return new Response(JSON.stringify({ user, token }), {
+        return new Response(JSON.stringify({ token }), {
             status: 200,
             headers: {
                 'Content-Type': 'application/json',

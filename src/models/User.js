@@ -8,6 +8,7 @@ const userSchema = new mongoose.Schema({
     weight: { type: Number, required: true },
     bloodGroup: { type: String, required: true },
     gender: { type: String, required: true },
+    age: { type: Number, required: true },
 });
 
 export default mongoose.models.User || mongoose.model('User', userSchema);

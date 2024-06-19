@@ -49,3 +49,7 @@ export const verifyToken = async (token) => {
         throw new Error('Invalid token');
     }
 };
+
+export const logout = () => {
+    localStorage.removeItem('token');
+};
